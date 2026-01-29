@@ -12,8 +12,8 @@ Servo myservo;
 
 #define SERVO_OPEN 100
 #define SERVO_CLOSE 0
-#define SERVO_THRESHOLD 10
-#define RESET_THRESHOLD 20
+#define SERVO_THRESHOLD 27
+#define RESET_THRESHOLD 40
 #define SERVO_SPEED 30
 #define INTERVAL 1500
 #define RETRY_TIMER 3000
