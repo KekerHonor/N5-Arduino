@@ -10,8 +10,8 @@ NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE); // initialize NewPing
 #define SERVO 9
 Servo myservo;
 
-#define SERVO_OPEN 100
-#define SERVO_CLOSE 0
+#define SERVO_OPEN 0
+#define SERVO_CLOSE 100
 #define SERVO_THRESHOLD 27
 #define RESET_THRESHOLD 40
 #define SERVO_SPEED 30
