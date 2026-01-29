@@ -131,7 +131,7 @@ int slowClose () {
       delay(SERVO_SPEED);
     }
   } else {
-    for(int pos=SERVO_CLOSE; pos <= SERVO_OPEN; pos++) {
+    for(int pos=SERVO_OPEN; pos <= SERVO_CLOSE; pos++) {
       myservo.write(pos);
       delay(SERVO_SPEED);
     }
