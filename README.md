@@ -44,7 +44,8 @@ If the claw closes but you **do not lift the arm** (height stays below 27 cm):
 
 The code cycles through 4 logic states. You can visualize the flow below:
 
-```mermaid
-graph TD
-    A[State 1: Ready to Grab] -->|Dist < 27cm for 1.5s| B[State 2: Lifting / Verify]
-    B -->|Dist > 40cm| C[State 3:
+|State|Condition|Flags|Description|
+|1. Ready to Grab|isOpen=1 isReady=1|Sensor looks for ground (< 27cm). Starts 1.5s timer.|
+|2. Lifting / Verify|isOpen=0 isReady=0|Claw is closed. Waiting for arm to go High (> 40cm) to confirm success OR checks Fumble Timer (3s).|
+|3. Ready to Drop|isOpen=0 isReady=1|Object is secured. Waiting for arm to go Low (< 27cm) to release.|
+|4. Resetting|isOpen=1 isReady=0|Just dropped. Waiting for arm to go High (> 40cm) to reset logic.|
